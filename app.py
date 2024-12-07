@@ -5,9 +5,9 @@ recognizer = sr.Recognizer()
 with sr.Microphone() as source:
     print("Adjusting noise ")
     recognizer.adjust_for_ambient_noise(source, duration=1)
-    print("Recording for 4 seconds")
-    recorded_audio = recognizer.listen(source, timeout=4)
-    print("Done recording")
+    print("Recording for 30 seconds")
+    recorded_audio = recognizer.listen(source, timeout=20)
+    print("Done Recording")
 
 try:
     print("Recognizing the text")
