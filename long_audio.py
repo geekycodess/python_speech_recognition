@@ -8,8 +8,8 @@ recognizer = sr.Recognizer()
 def load_chunks(filename):
     long_audio = AudioSegment.from_mp3(filename)
     audio_chunks = split_on_silence(
-        long_audio, min_silence_len=1800,
-        silence_thresh=-17
+        long_audio, min_silence_len=2000,
+        silence_thresh=-16
     )
     return audio_chunks
 
